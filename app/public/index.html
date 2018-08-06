@@ -15,7 +15,7 @@
 
 <body>
     <!-- unsplash image goes here -->
-    <img src="https://placehold.it/5000x3000">
+    <img id = "weatherPhoto" src="">
     <svg id="search" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="-1" y="-1" width="38" height="38" fill="black">
         <rect fill="white" x="-1" y="-1" width="38" height="38"/>
@@ -76,58 +76,6 @@
     <img id="looks-like-img" src="" alt="Unsplash image"> -->
 
 </body>
-<script>
-        //Initial Load
-        window.onload = function initialLoad() {
-            currentLocation = {
-                city:"",
-                country:""
-            };
-            //Response that incldues the location of the user's device
-            $.get("http://ipinfo.io", function (response) {
-                currentLocation.city = response.city;
-                currentLocation.country = response.country;
-                console.log(currentLocation);
+<script src = "app.js"></script>
     
-                //Initial api call to get the local weather.
-                $.get(`/api/weather?loc=${currentLocation.city} ${currentLocation.country}`, function (data) {
-    
-                    //Populate the page with weather information here 
-                    //*****
-                    console.log(data[0]);
-                    //*****
-                    
-                    //Use the weather type to query an artsy image from unsplash
-                    var weatherType = data[0].current.skytext
-                    weatherType = weatherType.replace(/\s+/g, '-');
-                    console.log(weatherType);
-                     getWeatherPhoto(weatherType);
-                });
-    
-            }, "jsonp");
-        }
-    
-        function getWeatherPhoto(weatherType) {
-            client_id = "95e9523f3067004936d2a7e699f17a4a7eff868b9d879769765c74a54bf6a64c";
-            $.get(`https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query=weather,${weatherType}&client_id=${client_id}`, function (data) {
-                $()
-                console.log(data.urls.regular)
-            });
-        }
-    
-    
-    
-        function updateWeather() {
-            var loc =  $("#loc").val();
-            console.log(loc)
-    
-            $.get(`/api/weather?loc=${loc}`, function (data) {
-                //Populate the page with weather information
-                console.log(data[0]);
-            });
-        }
-    
-    </script>
-    
-
 </html>
