@@ -141,6 +141,21 @@ img {
     padding-top: 4px;
 }
 
+#madeby {
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .6);
+}
+
+#madeby a {
+    color: inherit;
+    font-weight: 600;
+}
+
 section {
     position: absolute;
     bottom: 10%;
