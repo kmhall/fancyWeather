@@ -11,6 +11,9 @@ body {
     color: #fff;
     position: relative;
     font-size: 1.8rem;
+
+    /* fallback if unsplash fails */
+    background: #212121;
 }
 
 #city {
@@ -57,12 +60,6 @@ img {
 
 .meta li {
     padding-top: 4px;
-}
-
-#search {
-    position: absolute;
-    top: 60px;
-    right: 60px;
 }
 
 section {
