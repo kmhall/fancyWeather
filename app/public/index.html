@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FancyWeather</title>
+    <title id="title">FancyWeather</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsC8qAP+EAACzh1cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAACAAAAAAAAEiAAAAADAAAiAAAAAAMzAiAAAAAAAAMzAAAAAAAAAiMzMAAAAAAAADAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -27,28 +27,25 @@
         </div>
     <!--  -->
     
+
     <section>
+        <!-- Dynamically will be filled with the current weather data -->
         <div class="city-status">
-            <p>Today: <span id="status">Rainy</span></p>
-            <h2 id="city">Chicago, IL</h2>
+            <p><span id="status"></span></p>
+            <h2 id="city"></h2>
         </div>
         <div class="weather">
-            <h1 id="temperature">74<span>&deg;</span></h1>
+            <h1 id="temperature"><span></span></h1>
             <ul class="meta">
-                <li>Feels Like: <span id="feels-like">77&deg;</span></li>
-                <li>Wind: <span id="wind">7mph</span></li>
-                <li>Humidity: <span id="humidity">49&percnt;</span></li>
+                <li class ="feels-like"></li>
+                <li class ="wind"></li>
+                <li class ="humidity"></li>
             </ul>
         </div>
+        <!--  -->
+
         <ul class="forecast">
-            <li>
-                <h3>Monday</h3>
-                <p id="forecast00">92&deg;</p>
-            </li>
-            <li>
-                <h3>Tuesday</h3>
-                <p id="forecast01">88&deg;</p>
-            </li>
+            <!-- Dynamically will be filled with three-day forecast data -->
         </ul>
     </section>
 </body>
