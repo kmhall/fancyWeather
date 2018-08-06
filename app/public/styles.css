@@ -11,6 +11,9 @@ body {
     color: #fff;
     position: relative;
     font-size: 1.8rem;
+
+    /* fallback if unsplash fails */
+    background: #212121;
 }
 
 #city {
