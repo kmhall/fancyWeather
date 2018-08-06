@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather App</title>
+    <title>FancyWeather</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -13,7 +14,38 @@
 </head>
 
 <body>
-    <h2>Search the Weather</h2>
+    <!-- unsplash image goes here -->
+    <img src="https://placehold.it/5000x3000">
+    <section>
+        <div class="city-status">
+            <p id="status">Rainy</p>
+            <h2 id="city">Chicago, IL</h2>
+        </div>
+        <div class="weather">
+            <h1 id="temperature">74&deg;</h1>
+            <ul class="meta">
+                <li>Wind: <span id="wind">7mph</span></li>
+                <li>Precipitation: <span id="precipitation">49&percnt;</span></li>
+                <li>Humidity: <span id="umidity">77&percnt;</span></li>
+            </ul>
+        </div>
+        <ul class="forecast">
+            <li>
+                <h3>Monday</h3>
+                <p id="forecast00">92&deg;</p>
+            </li>
+            <li>
+                <h3>Tuesday</h3>
+                <p id="forecast01">88&deg;</p>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+
+    <!-- <h2>Search the Weather</h2>
     <input type="text" name="location" id="loc">
     <button onclick="getWeather()"> Send It</button>
     <br>
@@ -31,7 +63,7 @@
     <b id="5day">5 day forcast: </b>
     <br>
 
-    <img id="looks-like-img" src="" alt="Unsplash image">
+    <img id="looks-like-img" src="" alt="Unsplash image"> -->
 
 </body>
 <script>
