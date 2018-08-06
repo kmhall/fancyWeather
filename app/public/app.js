@@ -17,6 +17,11 @@
                     //*****
                     var weatherInfo = data[0];
                     console.log(weatherInfo);
+
+
+                    if (skytext === "")
+
+
                     $("#status").html(weatherInfo.current.skytext);
                     $("#city").html(weatherInfo.location.name);
                     
