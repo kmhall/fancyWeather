@@ -15,7 +15,20 @@
     
                     //Populate the page with weather information here 
                     //*****
-                    console.log(data[0]);
+                    var weatherInfo = data[0];
+                    console.log(weatherInfo);
+                    $("#status").html(weatherInfo.current.skytext);
+                    $("#city").html(weatherInfo.location.name);
+                    
+                    $("#temperature").html(weatherInfo.current.temperature);
+                    $("<span>").html(`&deg;`).appendTo($("#temperature"))
+
+                    $("#feels-like").html(`${weatherInfo.current.feelslike}&deg;`);
+                    $("#wind").html(weatherInfo.current.windspeed);
+                    $("#humidity").html(`${weatherInfo.current.temperature}&percnt;`);
+
+
+
                     //*****
                     
                     //Use the weather type to query an artsy image from unsplash
