@@ -62,12 +62,6 @@ img {
     padding-top: 4px;
 }
 
-#search {
-    position: absolute;
-    top: 60px;
-    right: 60px;
-}
-
 section {
     position: absolute;
     bottom: 10%;
