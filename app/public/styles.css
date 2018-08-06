@@ -159,3 +159,67 @@ section {
     display: flex;
     align-items: flex-end;
 }
+
+@media all and (max-width: 600px) {
+    body {
+        font-size: 1.6rem;
+    }
+    
+    section {
+        left: 6%;
+    }
+
+    .meta {
+        margin-left: 8px;
+    }
+}
+
+@media all and (max-width: 540px) {
+    #temperature {
+        font-size: 22rem;
+    }
+
+    #city {
+        font-size: 2.8rem;
+    }
+}
+
+@media all and (max-width: 490px) {
+    .weather {
+        display: block;
+    }
+
+    .meta {
+        display: flex;
+        margin-top: 16px;
+    }
+
+    .meta li {
+        margin-right: 16px;
+    }
+}
+
+@media all and (max-width: 444px) {
+    .meta {
+        display: block;
+        margin-top: 32px;
+    }
+}
+
+@media all and (max-width: 340px) {
+    .forecast {
+        display: none;
+    }
+
+    .meta {
+        display: none;
+    }
+
+    section {
+        left: 5%;
+    }
+
+    #temperature {
+        font-size: 20rem;
+    }
+}
