@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <h2>Search the Weather</h2>
+    <input type="text" name="location" id="loc">
+    <button onclick="getWeather()"> Send It</button>
+    <br>
+    <b id="date">Date: </b>
+    <br>
+
+    <b id="location">Location: </b>
+    <br>
+    <b id="temp">Temperature: </b>
+    <br>
+
+    <b id="looks-like">What it's like: </b>
+    <br>
+
+    <b id="5day">5 day forcast: </b>
+    <br>
+
+    <img id="looks-like-img" src="" alt="Unsplash image">
+
+</body>
+<script>
+    client_id = "95e9523f3067004936d2a7e699f17a4a7eff868b9d879769765c74a54bf6a64c";
+    $.get(`https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query=partly-cloudy&client_id=${client_id}`, function (data) {
+        $()
+        console.log(data)
+    });
+
+
+
+    function getWeather() {
+        var loc = $("#loc").val()
+        console.log(loc);
+        $.get(`/api/weather?loc=${loc}`, function (data) {
+            //Populate the page with weather information
+            console.log(data[0]);
+        });
+
+    }
+</script>
+
+</html>
