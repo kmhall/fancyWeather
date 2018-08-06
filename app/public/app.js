@@ -5,7 +5,7 @@ window.onload = function initialLoad() {
         country: ""
     };
     //Response that includes the location of the user's device
-    $.get("http://ipinfo.io", function (response) {
+    $.get("https://ipinfo.io", function (response) {
         currentLocation.city = response.city;
         currentLocation.country = response.country;
         // console.log(currentLocation);
