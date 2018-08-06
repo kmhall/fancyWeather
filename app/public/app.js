@@ -27,6 +27,11 @@
                     $("#wind").html(weatherInfo.current.windspeed);
                     $("#humidity").html(`${weatherInfo.current.temperature}&percnt;`);
 
+                    var forcast = weatherInfo.forcast;
+                    for(var i=2;i<5;i++){
+                        
+                    }
+
 
 
                     //*****
