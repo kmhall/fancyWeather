@@ -212,6 +212,10 @@ section {
         display: block;
         margin-top: 32px;
     }
+
+    .forecast p {
+        font-size: 5.2rem;
+    }
 }
 
 @media all and (max-width: 340px) {
