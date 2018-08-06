@@ -15,7 +15,7 @@ window.onload = function initialLoad() {
 
             //Populate the page with local weater infoß 
             var weatherInfo = data[0];
-            console.log(weatherInfo);
+            // console.log(weatherInfo);
 
             $("#status").html(weatherInfo.current.skytext);
             $("#city").html(weatherInfo.location.name);
