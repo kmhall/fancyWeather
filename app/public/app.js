@@ -81,6 +81,14 @@ function getWeatherPhoto(weatherType) {
     });
 }
 
+$("#search").focusout(function(e) {
+    inputLocation = $("#search").val();
+        $("#search").val("")
+        if (inputLocation) {
+            updateWeather();
+
+        }
+});
 $("#search").on('keyup', function (e) {
     if (e.keyCode == 13) {
         inputLocation = $("#search").val();
