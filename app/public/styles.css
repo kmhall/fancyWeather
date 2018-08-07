@@ -25,11 +25,17 @@ body {
     font-size: 3.6rem;
 }
 
+#time{
+    position: absolute;
+    
+}
+
 .box {
     position: absolute;
     top: 4%;
     right: 4%;
 }
+
 
 .container-2{
     width: 300px;
