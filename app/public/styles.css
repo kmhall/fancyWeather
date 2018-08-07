@@ -147,6 +147,21 @@ img {
     padding-top: 4px;
 }
 
+#madeby {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .6);
+}
+
+#madeby a {
+    color: inherit;
+    font-weight: 600;
+}
+
 section {
     position: absolute;
     bottom: 10%;
@@ -180,6 +195,10 @@ section {
     }
     
     section {
+        left: 6%;
+    }
+
+    #madeby {
         left: 6%;
     }
 
@@ -222,6 +241,10 @@ section {
     .forecast p {
         font-size: 5.2rem;
     }
+
+    .forecast li {
+        margin-right: 16px;
+    }
 }
 
 @media all and (max-width: 340px) {
@@ -234,6 +257,10 @@ section {
     }
 
     section {
+        left: 5%;
+    }
+
+    #madeby {
         left: 5%;
     }
 
