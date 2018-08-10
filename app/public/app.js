@@ -10,8 +10,15 @@ window.onload = function initialLoad() {
   var cookie = decodeURIComponent(document.cookie);
   var cookieArray = cookie.split(";");
   let cookieTemp = cookieArray[2].charAt(cookieArray[2].length - 1);
+
   if (cookieTemp == "F" || cookieTemp == "C") {
     var degreePreference = cookieTemp;
+  }
+
+  if (degreePreference == "F") {
+    $("#temp-type-f").addClass("active");
+  } else {
+    $("#temp-type-c").addClass("active");
   }
 
   //Response that includes the location of the user's device
