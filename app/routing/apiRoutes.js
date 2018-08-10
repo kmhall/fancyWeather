@@ -12,6 +12,8 @@ module.exports = function(app) {
 
   app.get("/api/weather/", function(req, res) {
     loc = req.param("loc");
+    degreePreference = req.param("tempType");
+
     console.log(loc);
 
     weather.find({ search: loc, degreeType: degreePreference }, function(

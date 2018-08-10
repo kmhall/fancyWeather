@@ -4,6 +4,16 @@ window.onload = function initialLoad() {
     city: "",
     country: ""
   };
+
+  var degreePreference = "F";
+
+  var cookie = decodeURIComponent(document.cookie);
+  var cookieArray = cookie.split(";");
+  let cookieTemp = cookieArray[2].charAt(cookieArray[2].length - 1);
+  if (cookieTemp == "F" || cookieTemp == "C") {
+    var degreePreference = cookieTemp;
+  }
+
   //Response that includes the location of the user's device
   $.get(
     "https://ipinfo.io",
@@ -14,7 +24,7 @@ window.onload = function initialLoad() {
 
       //Initial api call to get the local weather.
       $.get(
-        `/api/weather?loc=${currentLocation.city} ${currentLocation.country}`,
+        `/api/weather?loc=${currentLocation.city} ${currentLocation.country}&tempType=${degreePreference}`,
         function(data) {
           //Populate the page with local weater infoß
           var weatherInfo = data[0];
@@ -152,8 +162,12 @@ function setTempType(type) {
   if (type === "C") {
     $("#temp-type-f").removeClass("active");
     $("#temp-type-c").addClass("active");
+    document.cookie = "temp=C";
   } else if (type === "F") {
     $("#temp-type-c").removeClass("active");
     $("#temp-type-f").addClass("active");
+    document.cookie = "temp=F";
   }
+
+  dispatchEvent(new Event("load"));
 }
