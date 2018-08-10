@@ -55,6 +55,13 @@ window.onload = function initialLoad() {
           $("#wind").html(weatherInfo.current.windspeed);
           $("#humidity").html(`${weatherInfo.current.temperature}&percnt;`);
 
+          /* had to put this in here
+           * to clear the forecast section first
+           * because when switching from F to C or vice versa
+           * it would just append the weather to the already existing forecast 
+           */
+          $(".forecast").html("");
+
           for (var i = 2; i < 5; i++) {
             var li = $("<li>");
             var h3 = $("<h3>").html(weatherInfo.forecast[i].day);
