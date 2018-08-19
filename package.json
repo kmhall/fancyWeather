@@ -1,17 +1,14 @@
 {
-  "name": "weatherApp",
-  "version": "1.0.0",
-  "description": "Display the weather at your current location and the forcast",
-  "main": "app.js",
-  "author": "Kyle & Dario",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "node": "^10.8.0",
-    "weather-js": "^2.0.0"
-  },
-  "scripts": {
-    "start": "node server.js"
-  }
+    "name": "weatherApp",
+    "version": "1.0.0",
+    "description": "Display the weather at your current location and the forcast",
+    "main": "app.js",
+    "author": "Kyle & Dario",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "node": "^10.8.0",
+        "weather-js": "^2.0.0"
+    }
 }
