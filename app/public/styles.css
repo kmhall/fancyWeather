@@ -31,8 +31,6 @@ body {
 }
 
 .google-box{
-    height: 100%; 
-    overflow: auto;
     position: absolute;
     top: 4%;
     right: 4%;
@@ -243,8 +241,6 @@ section {
 @media all and (max-width: 650px) {
 
     .google-box{
-        height: 100%; 
-        overflow: auto;
         position: absolute;
         top: 14%;
         left: 35px;
