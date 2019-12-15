@@ -30,10 +30,19 @@ body {
     
 }
 
-.box {
+.google-box{
+    height: 100%; 
+    overflow: auto;
     position: absolute;
     top: 4%;
     right: 4%;
+    color: rgba(255, 255, 255, .6);  
+}
+
+.box {
+    position: absolute;
+    top: 4%;
+    left: 35px;
 }
 
 
@@ -42,6 +51,27 @@ body {
     vertical-align: middle;
     white-space: nowrap;
     position: relative;
+}
+
+.container-2 input#google-search{
+    width: 265px;
+    height: 50px;
+    background: rgba(0, 0, 0, .3);
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: rgba(255, 255, 255, .8);
+    padding-left: 35px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
 }
 
 .container-2 input#search{
@@ -189,7 +219,15 @@ section {
     align-items: flex-end;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
+
+    .google-box{
+        height: 100%; 
+        overflow: auto;
+        position: absolute;
+        top: 14%;
+        left: 35px;
+    }
     body {
         font-size: 1.6rem;
     }
