@@ -36,7 +36,6 @@ body {
     position: absolute;
     top: 4%;
     right: 4%;
-    color: rgba(255, 255, 255, .6);  
 }
 
 .box {
@@ -54,14 +53,14 @@ body {
 }
 
 .container-2 input#google-search{
-    width: 265px;
+    width: 250px;
     height: 50px;
     background: rgba(0, 0, 0, .3);
     border: none;
     font-size: 10pt;
     float: left;
     color: rgba(255, 255, 255, .8);
-    padding-left: 35px;
+    padding-left: 50px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -110,6 +109,7 @@ body {
 .container-2 input#search:-ms-input-placeholder {  
     color: rgba(255, 255, 255, .6);  
 }
+
 
 .container-2 .icon{
     position: absolute;
